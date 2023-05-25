@@ -6,14 +6,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-public class contato {
+@Entity
+public class Contato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
- @Column(nullable = false);
- private String nome;
- @Column(nullable = false);
- private Long idade;
+    @Column(nullable = false)
+    private String nome;
+    @Column(nullable = false)
+    private Long idade;
 
     public Long getId() {
         return id;
